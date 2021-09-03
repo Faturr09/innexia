@@ -1,4 +1,4 @@
-<h1 align="center"><b> ⚡ Innexia ⚡ </b></h1>
+<h1 align="center"><b> ⚡ᴠɪʀᴛᴜᴀʟ ᴄʜᴀᴛ ɪᴅ ʙᴏᴛ⚡ </b></h1>
 
 <h4 align="center">A Powerful, Smart And Simple Group Manager <br> ... Written with AioGram , Pyrogram and Telethon...</h4>
 <p align='center'>
@@ -27,7 +27,7 @@ The easiest way to deploy this Bot is via Heroku.
 ## ✨ Deploying to Local Machine ✨
 
 ```console
-$ git clone https://github.com/DarkCybers/innexia
+$ git clone https://github.com/Faturr09/innexia
 $ cd innexiaBot
 $ pip3 install -U -r requirements.txt
 $ cp sample_config.py config.py
