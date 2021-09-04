@@ -23,24 +23,24 @@ from telegram.utils.helpers import mention_html
 
 def check_user(user_id: int, bot: Bot, chat: Chat) -> Optional[str]:
     if not user_id:
-        reply = "You don't seem to be referring to a user or the ID specified is incorrect.."
+        reply = "Salah orang paok coba cek IDnya.."
         return reply
 
     try:
         member = chat.get_member(user_id)
     except BadRequest as excp:
-        if excp.message == "User not found":
-            reply = "I can't seem to find this user"
+        if excp.message == "Jamet tidak di temukan":
+            reply = "Jametnya nggk ada anjir"
             return reply
         else:
             raise
 
     if user_id == bot.id:
-        reply = "I'm not gonna MUTE myself, How high are you?"
+        reply = "Dih sok keras mau MUTE gue emang lu siapa?"
         return reply
 
     if is_user_admin(chat, user_id, member) or user_id in TIGERS:
-        reply = "Can't. Find someone else to mute but not this one."
+        reply = "Lah orangnya mana."
         return reply
 
     return None
@@ -89,7 +89,7 @@ def mute(update: Update, context: CallbackContext) -> str:
         return log
 
     else:
-        message.reply_text("This user is already muted!")
+        message.reply_text("Mampos kau jamet ke MUTE!")
 
     return ""
 
@@ -108,20 +108,20 @@ def unmute(update: Update, context: CallbackContext) -> str:
     user_id = extract_user(message, args)
     if not user_id:
         message.reply_text(
-            "You'll need to either give me a username to unmute, or reply to someone to be unmuted."
+            "Bang jagonya nggak di temukan."
         )
         return ""
 
     member = chat.get_member(int(user_id))
 
-    if member.status != "kicked" and member.status != "left":
+    if member.status != "Tertendang" and member.status != "YAH keluar":
         if (
             member.can_send_messages
             and member.can_send_media_messages
             and member.can_send_other_messages
             and member.can_add_web_page_previews
         ):
-            message.reply_text("This user already has the right to speak.")
+            message.reply_text("Makannya jangan sok keras paok.")
         else:
             chat_permissions = ChatPermissions(
                 can_send_messages=True,
@@ -234,7 +234,7 @@ def temp_mute(update: Update, context: CallbackContext) -> str:
                 chat.id,
                 excp.message,
             )
-            message.reply_text("Well damn, I can't mute that user.")
+            message.reply_text("Mana bisa di mute goblok.")
 
     return ""
 
