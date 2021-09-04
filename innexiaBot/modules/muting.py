@@ -40,7 +40,7 @@ def check_user(user_id: int, bot: Bot, chat: Chat) -> Optional[str]:
         return reply
 
     if is_user_admin(chat, user_id, member) or user_id in TIGERS:
-        reply = "Lah orangnya mana."
+        reply = "Dia admin bego."
         return reply
 
     return None
@@ -83,7 +83,7 @@ def mute(update: Update, context: CallbackContext) -> str:
         bot.restrict_chat_member(chat.id, user_id, chat_permissions)
         bot.sendMessage(
             chat.id,
-            f"Muted <b>{html.escape(member.user.first_name)}</b> with no expiration date!",
+            f"Ku Mute <b>{html.escape(member.user.first_name)}</b> Mampos kau!",
             parse_mode=ParseMode.HTML,
         )
         return log
@@ -139,7 +139,7 @@ def unmute(update: Update, context: CallbackContext) -> str:
                 pass
             bot.sendMessage(
                 chat.id,
-                f"I shall allow <b>{html.escape(member.user.first_name)}</b> to text!",
+                f"Makannya jan sok keras <b>{html.escape(member.user.first_name)}</b> Kampang!",
                 parse_mode=ParseMode.HTML,
             )
             return (
@@ -150,8 +150,8 @@ def unmute(update: Update, context: CallbackContext) -> str:
             )
     else:
         message.reply_text(
-            "This user isn't even in the chat, unmuting them won't make them talk more than they "
-            "already do!"
+            "Nih orang nggak ada di grub "
+            "Coba lagi!"
         )
 
     return ""
@@ -179,7 +179,7 @@ def temp_mute(update: Update, context: CallbackContext) -> str:
     member = chat.get_member(user_id)
 
     if not reason:
-        message.reply_text("You haven't specified a time to mute this user for!")
+        message.reply_text("Tidak ada Waktunya!")
         return ""
 
     split_reason = reason.split(None, 1)
@@ -218,12 +218,12 @@ def temp_mute(update: Update, context: CallbackContext) -> str:
             )
             return log
         else:
-            message.reply_text("This user is already muted.")
+            message.reply_text("Nih jamet udah ke mute.")
 
     except BadRequest as excp:
-        if excp.message == "Reply message not found":
+        if excp.message == "Udah ke hapus":
             # Do not reply
-            message.reply_text(f"Muted for {time_val}!", quote=False)
+            message.reply_text(f"Ku Mute sampai {time_val}!", quote=False)
             return log
         else:
             LOGGER.warning(update)
