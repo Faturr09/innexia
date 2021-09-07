@@ -8,7 +8,7 @@
 
 <p align="center"><a href="http://t.me/VCID_bot"><img src="(https://telegra.ph/file/d0182ae1f56a47ab595b5.jpg)" width="400"></a></p>
 
-## Available on Telegram as [@Innexia](https://t.me/innexiaBot)
+## Available on Telegram as [@virtualchatID](https://t.me/VCID_bot)
 
 # ❤️ Support
 <a href="https://t.me/SiderzBot"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
