@@ -10,12 +10,8 @@
 
 ## Available on Telegram as [@virtualchatID](https://t.me/VCID_bot)
 
-# ❤️ Support
-<a href="https://t.me/SiderzBot"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
-<a href="t.me/SiderzChat"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
 
-
-> ⭐️ Thanks to everyone who starred Innexia, That is the greatest pleasure we have !
+> ⭐️ Thanks to everyone who starred Virtual bot, That is the greatest pleasure we have !
 
 ## Click The Image And Deploy Your Bot
 
@@ -39,7 +35,7 @@ $ cp sample_config.py config.py
 ## ✨ Using Docker ✨
 
 ```console
-$ git clone https://github.com/DarkCybers/innexia
+$ git clone https://github.com/Faturr09/innexia
 $ cd innexiaBot
 $ cp sample_config.env config.env
 ```
