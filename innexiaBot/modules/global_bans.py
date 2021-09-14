@@ -14,8 +14,8 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html
 
-import DaisyX.modules.sql.global_bans_sql as sql
-from DaisyX import (
+import innexiaBot.modules.sql.global_bans_sql as sql
+from innexiaBot import (
     DEMONS,
     DEV_USERS,
     DRAGONS,
@@ -29,14 +29,14 @@ from DaisyX import (
     dispatcher,
     sw,
 )
-from DaisyX.modules.helper_funcs.chat_status import (
+from innexiaBot.modules.helper_funcs.chat_status import (
     is_user_admin,
     support_plus,
     user_admin,
 )
-from DaisyX.modules.helper_funcs.extraction import extract_user, extract_user_and_text
-from DaisyX.modules.helper_funcs.misc import send_to_list
-from DaisyX.modules.sql.users_sql import get_user_com_chats
+from innexiaBot.modules.helper_funcs.extraction import extract_user, extract_user_and_text
+from innexiaBot.modules.helper_funcs.misc import send_to_list
+from innexiaBot.modules.sql.users_sql import get_user_com_chats
 
 GBAN_ENFORCE_GROUP = 6
 
